@@ -6,10 +6,15 @@
     flex-direction:column;
     .logo{
         text-align:center;
+        margin-bottom:20px;
     }
    .news-sections{
        text-align:center;
        width:100%;
+
+       .choose-section{
+           margin-bottom:20px;
+       }
    }
    @include tablet{
     display:flex;
@@ -41,6 +46,7 @@
     height:270px;
 
     .logo{
+        margin-bottom:20px;
         width:150px;
     }
     @include tablet{
@@ -48,6 +54,7 @@
        
     .logo{
         width:70px;
+        margin-bottom:0;
     }
   
     }
