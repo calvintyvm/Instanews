@@ -1,10 +1,7 @@
 $('select[name="news-sections"]').change(function () {
-
-
     var selected = $(this).val();
     $('.site-header').addClass('newHeader');
     $('.list').addClass('newList');
-
     $('.list').before('<div class ="loading"><img src="./images/ajax-loader.gif"> </div>');    
     $('.list').empty()
         var url = "https://api.nytimes.com/svc/topstories/v2/" +  selected + ".json";
@@ -19,10 +16,7 @@ $('select[name="news-sections"]').change(function () {
             var picStories = result.results.filter(function(article){
                 return article.multimedia.length;
             }).slice(0,12);
-    
-            console.log(result);
             $.each(picStories, function(index, value) {
-
                 var articleLink = value.url;
                   var html = "";
                   html += '<a href=' + articleLink + '>';
@@ -33,18 +27,12 @@ $('select[name="news-sections"]').change(function () {
                   html += "</li>";
                   html += '</a>';
                   $(".list").append(html);
-                
-                // console.log(result.section);
               });
             })    
-
         .fail(function (err) {
-            throw err;
+            alert("Sorry an error has occured, please try again.");
         })
-
         .always(function (){
             $('.loading').remove();
-        
         });
-
     });
