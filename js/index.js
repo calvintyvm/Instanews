@@ -1,3 +1,5 @@
+$( document ).ready(
+
 $('select[name="news-sections"]').change(function () {
     var selected = $(this).val();
     $('.site-header').addClass('newHeader');
@@ -35,4 +37,5 @@ $('select[name="news-sections"]').change(function () {
         .always(function (){
             $('.loading').remove();
         });
-    });
+    })
+);
