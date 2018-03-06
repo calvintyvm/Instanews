@@ -177,6 +177,8 @@ body {
   .footer .copyright {
     padding: 2rem;
     color: #c2c2c2; }
+    .footer .copyright span {
+      text-transform: uppercase; }
   @media (min-width: 1000px) {
     .footer {
       text-align: left;
