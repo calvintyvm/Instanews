@@ -1,0 +1,16 @@
+.footer{
+    text-align:center;
+    
+        .copyright{
+            padding:2rem;
+            color:#c2c2c2;
+        }
+        
+    
+    
+        @include desktop{
+    text-align:left;
+    padding-left:50px;
+        
+    }
+    }
