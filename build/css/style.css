@@ -120,6 +120,9 @@ body {
   font-size: 16px;
   font-family: "Open Sans"; }
 
+#logo2 {
+  display: none; }
+
 .logo {
   -webkit-transition: all .5s ease-out;
   transition: all .5s ease-out; }

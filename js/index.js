@@ -30,6 +30,8 @@ $('select[name="news-sections"]').change(function () {
                   html += '<p>' + value.abstract + '</p></div></div>';
                   html += "</li>";
                   html += '</a>';
+                  $('#logo').css('display','none');
+                  $('#logo2').css('display','block');
                   $('#original-section').css('display','none');
                   $(".list").append(html);
                 
