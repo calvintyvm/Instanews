@@ -1,108 +1,40 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i');
 
 body{
-background-color:black;
+background-color:$background-color;
 font-size:16px;
-font-family:'Open Sans';
+font-family:$main-font;
 
 }
-
-
-
 .logo{
     transition: all .5s ease-out;
-}
-
-
-.site-header{
-   
-    display:flex;
-    height:90vh;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    .logo{
-        text-align:center;
-    }
-   .news-sections{
-       text-align:center;
-       width:100%;
-   }
-
-   
-   @include tablet{
-    display:flex;
-    align-items:center;
-    justify-content:flex-start;
-    flex-direction:row;
-    padding:2em;
-    height:600px;
-   }
-   .news-sections{
-       text-align:center;
-       width:200px;
-     
-   }
-   
-   @include desktop{
-    display:flex;
-    align-items:center;
-    justify-content:flex-start;
-    flex-direction:row;
-    padding:2em;
-    height:600px;
-   }
-   .news-sections{
-       text-align:center;
-       width:200px;
-     
-   }
-}
-
-.newHeader{
-    display:flex;
-    height:270px;
-
-    .logo{
-        width:150px;
-        
-    }
-
-    @include tablet{
-       height:100px;
-       
-    .logo{
-        width:70px;
-    }
-  
-    }
 }
 
 .list{
     list-style:none;
     p{
-        color:white;
+        color:$body-color;
+        line-height:20px;
+        margin-left:2%;
+        margin-right:2%;
+        margin-bottom:2%;
+        margin-top:2%;
+   
         }
 }
-
 .news-sections{
     @include desktop{
-  
-
     text-align:left;
     padding-left:70px;
 
     }
 }
-
-
 #news-sections{
     font-size:1.1rem;
 }
 .choose-section{
-    color:white;
+    color:$body-color;
 }
-
 .bkimg{
     height:420px;
     position:relative;
@@ -112,9 +44,10 @@ font-family:'Open Sans';
     .abstract{
         position:absolute;
         bottom:0;
-        background-color: rgba(0,0,0,.6);
+        background-color:$background-text-color;
         width:100%;
         text-align:left;
+<<<<<<< HEAD
         
 
     }
@@ -122,6 +55,12 @@ font-family:'Open Sans';
 
 
 
+=======
+
+        
+    }
+}
+>>>>>>> c0a2626f2fca21545f7385117cdb2dd92fdf1c17
 .loading{
     width:100px;
     margin: 0 auto;
