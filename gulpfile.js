@@ -8,8 +8,6 @@ var gulp = require('gulp'), //Load Gulp First
     cssnano = require('gulp-cssnano'),
     prettyError = require('gulp-prettyerror');
 
-
-
     //gulp task for sass
     gulp.task('sass',function(){
         return gulp.src('./scss/style.scss')
@@ -25,7 +23,6 @@ var gulp = require('gulp'), //Load Gulp First
         .pipe(rename('style.min.css'))
         .pipe(gulp.dest('./build/css'));
     });
-
 
     //Link task for the JS
 
@@ -45,20 +42,12 @@ gulp.task('scripts', gulp.series ('lint',function(){
         .pipe(gulp.dest('./build/js'))
 }));
 
-gulp.task('say_hello', function(done){
-    console.log("Hello!");
-    done();
-});
-
-
 gulp.task('watch', function() {
     gulp.watch('scss/*.scss', gulp.series('sass'));
     gulp.watch('js/*.js', gulp.series('scripts'));
  });
 
-
 //browser sync
-
 gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
@@ -66,15 +55,8 @@ gulp.task('browser-sync', function() {
         }
     });
 
-
-
-
     gulp.watch(['*.html','build/css/*.css','build/js/*.js']).on('change', browserSync.reload);
 });
-
-
-
-
 
 //default function that can reference multiple named tasks
 gulp.task('default', gulp.parallel('watch', 'browser-sync'));
