@@ -23,6 +23,11 @@ font-family:$main-font;
         }
 }
 .news-sections{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
     @include desktop{
     text-align:left;
     padding-left:70px;

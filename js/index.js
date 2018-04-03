@@ -18,11 +18,8 @@ $('select[name="news-sections"]').change(function () {
             var picStories = result.results.filter(function(article){
                 return article.multimedia.length;
             }).slice(0,12);
-<<<<<<< HEAD
     
 
-=======
->>>>>>> c0a2626f2fca21545f7385117cdb2dd92fdf1c17
             $.each(picStories, function(index, value) {
                 var articleLink = value.url;
                   var html = "";
@@ -33,12 +30,10 @@ $('select[name="news-sections"]').change(function () {
                   html += '<p>' + value.abstract + '</p></div></div>';
                   html += "</li>";
                   html += '</a>';
+                  $('#original-section').css('display','none');
                   $(".list").append(html);
-<<<<<<< HEAD
                 
 
-=======
->>>>>>> c0a2626f2fca21545f7385117cdb2dd92fdf1c17
               });
             })    
         .fail(function (err) {
