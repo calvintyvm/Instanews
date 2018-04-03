@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i');
+
 body{
 background-color:black;
 font-size:16px;
@@ -118,22 +120,7 @@ font-family:'Open Sans';
     }
 }
 
-.footer{
-text-align:center;
 
-    .copyright{
-        padding:2rem;
-        color:#c2c2c2;
-    }
-    
-
-
-    @include desktop{
-text-align:left;
-padding-left:50px;
-    
-}
-}
 
 .loading{
     width:100px;

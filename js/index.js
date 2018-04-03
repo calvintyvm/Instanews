@@ -20,7 +20,7 @@ $('select[name="news-sections"]').change(function () {
                 return article.multimedia.length;
             }).slice(0,12);
     
-            console.log(result);
+
             $.each(picStories, function(index, value) {
 
                 var articleLink = value.url;
@@ -34,7 +34,7 @@ $('select[name="news-sections"]').change(function () {
                   html += '</a>';
                   $(".list").append(html);
                 
-                // console.log(result.section);
+
               });
             })    
 
