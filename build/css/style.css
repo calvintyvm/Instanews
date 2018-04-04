@@ -267,7 +267,7 @@ table {
   cursor: pointer; }
 
 .selectric-items li.highlighted {
-  background: #D0D0D0;
+  background: white;
   color: #444; }
 
 .selectric-items li.selected {
@@ -450,14 +450,25 @@ body {
   position: relative;
   background: no-repeat;
   background-position: 50%;
-  background-size: cover; }
+  background-size: cover;
+  overflow: visible; }
+  @media (min-width: 1000px) {
+    .bkimg {
+      overflow: hidden; } }
   .bkimg .abstract {
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
     min-height: 120px;
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     background-color: rgba(0, 0, 0, 0.6);
     width: 100%;
     text-align: left; }
+    @media (min-width: 1000px) {
+      .bkimg .abstract {
+        bottom: -130px; } }
+  .bkimg:hover > .abstract {
+    bottom: 0px; }
 
 .loading {
   width: 100px;

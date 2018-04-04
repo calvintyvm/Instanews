@@ -49,16 +49,30 @@ font-family:$main-font;
     background:no-repeat;
     background-position:50%;
     background-size:cover;
+   
+    overflow:visible;
+    @include desktop{
+        overflow:hidden;
+    }
     .abstract{
+        transition: all .3s ease-out;
         min-height:120px;
         position:absolute;
-        bottom:0;
+        bottom:0px;
         background-color:$background-text-color;
         width:100%;
         text-align:left;
+        @include desktop{
+            bottom:-130px;
+        }
+     
+        
         
 
     }
+&:hover > .abstract{
+    bottom:0px;
+}
 }
 
 
