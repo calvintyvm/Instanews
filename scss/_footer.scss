@@ -1,16 +1,14 @@
 .footer{
     text-align:center;
-    
+    text-transform:uppercase;
         .copyright{
             padding:2rem;
             color:#c2c2c2;
         }
-        
-    
-    
-        @include desktop{
+
+    @include desktop{
     text-align:left;
-    padding-left:50px;
+
         
     }
     }

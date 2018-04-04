@@ -1,6 +1,11 @@
-$( document ).ready(
+
+
+$( document ).ready(function () {
+    
+$('select').selectric();
 
 $('select[name="news-sections"]').change(function () {
+    
     var selected = $(this).val();
     $('.site-header').addClass('newHeader');
     $('.list').addClass('newList');
@@ -34,7 +39,7 @@ $('select[name="news-sections"]').change(function () {
                   $('#logo2').css('display','block');
                   $('#original-section').css('display','none');
                   $(".list").append(html);
-                
+                  
 
               });
             })    
@@ -42,7 +47,11 @@ $('select[name="news-sections"]').change(function () {
             alert("Sorry an error has occured, please try again.");
         })
         .always(function (){
+            
             $('.loading').remove();
+
         });
     })
-);
+    
+});
+

@@ -70,6 +70,243 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/*======================================
+  Selectric
+======================================*/
+.selectric-wrapper {
+  position: relative;
+  cursor: pointer; }
+
+.selectric-responsive {
+  width: 100%; }
+
+.selectric-button {
+  display: none; }
+
+.selectric {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid white;
+  background: black;
+  color: white;
+  position: relative;
+  border-radius: 0;
+  width: 8rem;
+  padding: 4px; }
+
+.selectric .label {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 30px 0 0;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #888;
+  min-height: 18px; }
+
+.selectric .button {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 42px;
+  height: 42px;
+  color: #BBB;
+  text-align: center;
+  font: 0/0 a;
+  /* IE Fix */
+  *font: 20px/30px Lucida Sans Unicode, Arial Unicode MS, Arial; }
+
+.selectric .button:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border: 4px solid transparent;
+  border-top-color: #BBB;
+  border-bottom: none; }
+
+.selectric-focus .selectric {
+  border-color: #AAA; }
+
+.selectric-hover .selectric {
+  border-color: #CCC; }
+
+.selectric-hover .selectric .button {
+  color: #888; }
+
+.selectric-hover .selectric .button:after {
+  border-top-color: #888; }
+
+.selectric-open {
+  z-index: 9999; }
+
+.selectric-open .selectric {
+  border-color: #CCC;
+  background: black;
+  border-bottom-width: 0;
+  padding-bottom: 2px; }
+
+.selectric-open .selectric-items {
+  display: block; }
+
+.selectric-open.selectric-above .selectric {
+  border-top-width: 0;
+  border-bottom-width: 2px; }
+
+.selectric-open.selectric-above .selectric-items {
+  border-bottom-width: 0;
+  border-top-width: 2px; }
+
+.selectric-disabled {
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.selectric-hide-select {
+  position: relative;
+  overflow: hidden;
+  width: 0;
+  height: 0; }
+
+.selectric-hide-select select {
+  position: absolute;
+  left: -100%; }
+
+.selectric-hide-select.selectric-is-native {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10; }
+
+.selectric-hide-select.selectric-is-native select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  border: none;
+  z-index: 1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  opacity: 0; }
+
+.selectric-input {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  outline: none !important;
+  border: none !important;
+  *font: 0/0 a !important;
+  background: none !important; }
+
+.selectric-temp-show {
+  position: absolute !important;
+  visibility: hidden !important;
+  display: block !important; }
+
+/* Items box */
+.selectric-items {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: black;
+  border: 2px solid #CCC;
+  border-top-width: 0;
+  z-index: -1;
+  padding: 0; }
+
+.selectric-items .selectric-scroll {
+  height: 100%;
+  overflow: auto; }
+
+.selectric-above .selectric-items {
+  top: auto;
+  bottom: 100%; }
+
+.selectric-items ul, .selectric-items li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  line-height: 20px;
+  min-height: 20px; }
+
+.selectric-items li {
+  display: block;
+  padding: 10px 20px;
+  color: #666;
+  cursor: pointer; }
+
+.selectric-items li.highlighted {
+  background: #D0D0D0;
+  color: #444; }
+
+.selectric-items li.selected {
+  background: white;
+  color: #444; }
+
+.selectric-items li:hover {
+  background: #FEFEFE;
+  color: #444; }
+
+.selectric-items .disabled {
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  cursor: default !important;
+  background: none !important;
+  color: #666 !important;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.selectric-items .selectric-group .selectric-group-label {
+  font-weight: bold;
+  padding-left: 10px;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: none;
+  color: #444; }
+
+.selectric-items .selectric-group.disabled li {
+  filter: alpha(opacity=100);
+  opacity: 1; }
+
+.selectric-items .selectric-group li {
+  padding-left: 25px; }
+
 .container {
   min-height: 100vh;
   display: -webkit-box;
@@ -87,7 +324,7 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 90vh;
+  height: 70vh;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -121,8 +358,7 @@ table {
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
               flex-direction: row;
-      padding: 2em;
-      height: 600px; } }
+      padding: 2em; } }
   .site-header .news-sections {
     text-align: center;
     width: 200px; }
@@ -141,8 +377,7 @@ table {
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
               flex-direction: row;
-      padding: 2em;
-      height: 600px; } }
+      padding: 2em; } }
   .site-header .news-sections {
     text-align: center;
     width: 200px; }
@@ -217,6 +452,7 @@ body {
   background-position: 50%;
   background-size: cover; }
   .bkimg .abstract {
+    min-height: 120px;
     position: absolute;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.6);
@@ -230,11 +466,11 @@ body {
     width: 100%; }
 
 .footer {
-  text-align: center; }
+  text-align: center;
+  text-transform: uppercase; }
   .footer .copyright {
     padding: 2rem;
     color: #c2c2c2; }
   @media (min-width: 1000px) {
     .footer {
-      text-align: left;
-      padding-left: 50px; } }
+      text-align: left; } }
